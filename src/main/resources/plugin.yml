@@ -1,0 +1,70 @@
+name: HQBans
+version: '1.0'
+main: com.hqbans.HQBans
+api-version: '1.20'
+authors: [devRaikou]
+description: A comprehensive bans management plugin
+website: https://sghq.eu
+
+commands:
+  ban:
+    description: Ban a player
+    permission: hqbans.ban
+  unban:
+    description: Unban a player
+    permission: hqbans.unban
+  mute:
+    description: Mute a player
+    permission: hqbans.mute
+  unmute:
+    description: Unmute a player
+    permission: hqbans.unmute
+  warn:
+    description: Warn a player
+    permission: hqbans.warn
+  kick:
+    description: Kick a player
+    permission: hqbans.kick
+  history:
+    description: View a player's punishment history
+    permission: hqbans.history
+  hqbans:
+    description: Plugin management commands
+    permission: hqbans.reload
+
+permissions:
+  hqbans.*:
+    description: Gives access to all HQBans commands
+    children:
+      hqbans.ban: true
+      hqbans.unban: true
+      hqbans.mute: true
+      hqbans.unmute: true
+      hqbans.warn: true
+      hqbans.kick: true
+      hqbans.history: true
+      hqbans.reload: true
+  hqbans.ban:
+    description: Allows banning players
+    default: op
+  hqbans.unban:
+    description: Allows unbanning players
+    default: op
+  hqbans.mute:
+    description: Allows muting players
+    default: op
+  hqbans.unmute:
+    description: Allows unmuting players
+    default: op
+  hqbans.warn:
+    description: Allows warning players
+    default: op
+  hqbans.kick:
+    description: Allows kicking players
+    default: op
+  hqbans.history:
+    description: Allows viewing player punishment history
+    default: op
+  hqbans.reload:
+    description: Allows reloading the plugin configuration
+    default: op 

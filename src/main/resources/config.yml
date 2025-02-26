@@ -1,0 +1,132 @@
+prefix: '&7[&6SGHQ&7] '
+
+discord:
+  enabled: true
+  webhook-url: 'https://discord.com/api/webhooks/1344299920206598154/f51rNJreJ3PhcEn5xADOLNoczjfPSSKRgor5p35WUvMcWXkg9JhHy7s21BSALULGkEFU'
+  embed-color: '#ff0000'
+  server-name: 'HQPunishment'
+  messages:
+    ban: '**{player}** was banned by **{admin}**'
+    unban: '**{player}** was unbanned by **{admin}**'
+    mute: '**{player}** was muted by **{admin}**'
+    unmute: '**{player}** was unmuted by **{admin}**'
+    warn: '**{player}** was warned by **{admin}**'
+    kick: '**{player}** was kicked by **{admin}**'
+
+messages:
+  ban:
+    broadcast: '{prefix}&c{player} &7has been banned by &c{admin}&7!'
+    reason: '&8» &7Reason: &f{reason}'
+    duration: '&8» &7Duration: &f{duration}'
+    permanent: '&4&lPERMANENT'
+    attempt: '&8[&c&lSTAFF&8] &c{player} &7tried to join while banned!'
+    screen: |
+      &4&lConnection Lost
+      &c&lYou have been banned!
+      &8&m                                          
+      
+      &7Banned by: &f{admin}
+      &7Reason: &f{reason}
+      &7Duration: &f{duration}
+      
+      &8&m                                          
+      &7   Appeal at: &b&nhttps://sghq.eu/appeal
+      &8&m                                          
+  
+  unban:
+    success: '{prefix}&a{player} &7has been unbanned by &a{admin}&7!'
+    not-banned: '{prefix}&cError: &7That player is not banned!'
+    not-found: '{prefix}&cError: &7Player not found in database!'
+  
+  mute:
+    broadcast: '{prefix}&c{player} &7has been muted by &c{admin}&7!'
+    reason: '&8» &7Reason: &f{reason}'
+    duration: '&8» &7Duration: &f{duration}'
+    attempt: '&8[&c&lSTAFF&8] &c{player} &7tried to send a message while muted: &f{message}'
+    message: |
+      &8&m--------------------
+      &c&lMUTE
+      &8&m--------------------
+      
+      &7You have been muted by &f{admin}
+      &8» &7Reason: &f{reason}
+      &8» &7Duration: &f{duration}
+      
+      &8&m--------------------
+    chat-blocked: |
+      &8&m--------------------
+      &c&lMUTED
+      &8&m--------------------
+      
+      &7You cannot chat while muted!
+      &8» &7Time remaining: &f{duration}
+      
+      &8&m--------------------
+  
+  unmute:
+    success: '{prefix}&a{player} &7has been unmuted by &a{admin}&7!'
+    not-muted: '{prefix}&cError: &7That player is not muted!'
+  
+  warn:
+    broadcast: '{prefix}&e{player} &7has been warned by &e{admin}&7!'
+    reason: '&8» &7Reason: &f{reason}'
+    message: |
+      &8&m--------------------
+      &e&lWARNING
+      &8&m--------------------
+      
+      &7You have been warned by &f{admin}
+      &8» &7Reason: &f{reason}
+      
+      &8&m--------------------
+  
+  kick:
+    broadcast: '{prefix}&e{player} &7has been kicked by &e{admin}&7!'
+    reason: '&8» &7Reason: &f{reason}'
+    screen: |
+      &c&lFailed to connect to the server
+      &c&lYou have been kicked!
+      &8&m--------------------
+      
+      &7Kicked by: &f{admin}
+      &7Reason: &f{reason}
+      
+      &8&m--------------------
+  
+  error:
+    player-not-found: '{prefix}&cError: &7Player not found!'
+    no-permission: '{prefix}&cError: &7You do not have permission to use this command!'
+    invalid-duration: '{prefix}&cError: &7Invalid duration format! Use: &f<number>s/m/h/d &7or &fpermanent'
+    invalid-limit: '{prefix}&cError: &7Invalid limit! Please enter a positive number.'
+    database-error: '{prefix}&cError: &7A database error occurred. Please contact an administrator.'
+    usage:
+      hqbans: '{prefix}&cAuthor: &7devRaikou'
+      ban: '{prefix}&cUsage: &7/ban <player> [duration] [reason]'
+      unban: '{prefix}&cUsage: &7/unban <player>'
+      mute: '{prefix}&cUsage: &7/mute <player> [duration] [reason]'
+      unmute: '{prefix}&cUsage: &7/unmute <player>'
+      warn: '{prefix}&cUsage: &7/warn <player> [reason]'
+      kick: '{prefix}&cUsage: &7/kick <player> [reason]'
+      history: '{prefix}&cUsage: &7/history <player> [limit]'
+
+  reload:
+    success: '{prefix}&aConfiguration reloaded successfully!'
+
+  history:
+    header: |
+      &8&m--------------------
+      &6&lPunishment History
+      &8&m--------------------
+      &7Player: &f{player}
+      &7Showing &f{count} &7of &f{allHistory} &7punishments
+      &8&m--------------------
+    no-history: '{prefix}&7No punishment history found for &f{player}&7.'
+    ban-entry: '&8» &c[BAN] &7by &f{admin} &7on &f{date} &7for &f{duration}'
+    mute-entry: '&8» &e[MUTE] &7by &f{admin} &7on &f{date} &7for &f{duration}'
+    warn-entry: '&8» &6[WARN] &7by &f{admin} &7on &f{date}'
+    kick-entry: '&8» &c[KICK] &7by &f{admin} &7on &f{date}'
+    reason: '  &8• &7Reason: &f{reason}'
+    active-suffix: ' &a(Active)'
+    expired-suffix: ' &c(Expired)'
+    footer: '&8&m--------------------'
+    usage: '{prefix}&cUsage: &7/history <player> [limit]' 

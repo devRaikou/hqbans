@@ -1,0 +1,10 @@
+com\hqbans\models\Ban.class
+com\hqbans\listeners\LoginListener.class
+com\hqbans\listeners\ChatListener.class
+com\hqbans\HQBans.class
+com\hqbans\utils\Config.class
+com\hqbans\database\DatabaseManager.class
+com\hqbans\models\Warn.class
+com\hqbans\models\Mute.class
+com\hqbans\models\Kick.class
+com\hqbans\utils\DiscordWebhook.class
