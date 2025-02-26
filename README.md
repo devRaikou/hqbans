@@ -1,1 +1,1 @@
-# hqpunishment
+# hqbans
